@@ -7,16 +7,21 @@ const tweetDetails = document.querySelector("#tweet-detail");
 
 tweetBtn.addEventListener("click", () => {
   console.log("clicked");
+  // Get the value of the tweet input
   const tweet = tweetInput.value;
 });
 
 document.addEventListener("click", (e) => {
+  // Check if the clicked element has the data-like attribute
   if (e.target.dataset.like) {
     handleLikeClick(e.target.dataset.like);
+    // Check if the clicked element has the data-reply attribute
   } else if (e.target.dataset.reply) {
     console.log("Reply", e.target.dataset.reply);
+    // Check if the clicked element has the data-retweet attribute
   } else if (e.target.dataset.retweet) {
     console.log("ReTweet", e.target.dataset.retweet);
+    // If none of the above conditions are met, return
   } else {
     return;
   }
@@ -29,6 +34,7 @@ function handleLikeClick(tweetId) {
     return tweet.uuid === tweetId;
     // Return the first object that matches the condition
   })[0];
+  // Increment the likes property of the targetTweetObj
   targetTweetObj.likes++;
   console.log(tweetsData);
 }
@@ -66,6 +72,7 @@ function getFeedHtml() {
 }
 
 function renderFeed() {
+  // Get the feed container and set the innerHTML to the feedHtml
   document.querySelector("#feed").innerHTML = getFeedHtml();
 }
 
