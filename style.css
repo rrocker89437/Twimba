@@ -1,0 +1,185 @@
+:root {
+  /* Font Family */
+  --font-family: "Roboto", sans-serif;
+
+  /* Font Size */
+  --fs-lg: 20px;
+  --fs-md: 15px;
+  --fs-sm: 14px;
+  --fs-xs: 13px;
+  --fs-xxs: 12px;
+
+  /* Line Height */
+  --lh-md: 30px;
+  --lh-sm: 20px;
+
+  /* Font Weights */
+  --fw-600: 600;
+  --fw-500: 500;
+
+  /* Colors */
+  --clr-white: #ffffff;
+  --clr-gray: #d3d3d3;
+  --clr-gray-drk: #555555;
+  --clr-blue: #0f8cdf;
+  --clr-red: #ff0000;
+  --clr-lime: #00ff00;
+
+  /* Background Colors */
+  --bg-blue: #1da1f2;
+}
+
+/* Resets */
+/* ------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  box-sizing: inherit;
+}
+
+/* Typography / Icons */
+/* ------------------------------------------------------------------- */
+h1 {
+  margin-bottom: 20px;
+  font-size: var(--fs-lg);
+  color: var(--clr-blue);
+}
+
+i {
+  font-size: var(--fs-md);
+  cursor: pointer;
+}
+
+.liked {
+  color: var(--clr-red);
+}
+
+.retweeted {
+  color: var(--clr-lime);
+}
+
+/* Layout */
+/* ------------------------------------------------------------------- */
+main,
+header {
+  margin: 0 auto;
+  width: 290px;
+}
+
+header {
+  padding-bottom: 25px;
+}
+
+.tweet-input-area {
+  --gap: 10px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+/* Text Areas & Btn */
+/* ------------------------------------------------------------------- */
+textarea {
+  margin: 0 0 20px 0;
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  font-size: var(--fs-lg);
+  line-height: var(--lh-md);
+  border: none;
+}
+
+button {
+  --radius: 20px;
+
+  padding: 10px 19px;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  background-color: var(--bg-blue);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-600);
+  cursor: pointer;
+}
+
+/* Tweet */
+/* ------------------------------------------------------------------- */
+.tweet {
+  --border: 1px solid var(--clr-gray);
+
+  margin: 15px 0;
+  padding: 20px 0 0 0;
+  width: 100%;
+  border: var(--border);
+}
+
+.tweet-inner {
+  --gap-1: 10px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-1);
+}
+
+.tweet-details {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  font-size: var(--fs-xs);
+}
+
+.tweet-detail {
+  --gap-2: 4px;
+
+  display: flex;
+  gap: var(--gap-2);
+}
+
+.tweet-reply {
+  --border-1: 1px solid var(--clr-gray);
+
+  margin: 10px 0 10px 40px;
+  padding: 20px 0 0 0;
+  width: 80%;
+  border-top: var(--border-1);
+}
+
+.tweet-text {
+  width: 207px;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+}
+
+.handle {
+  margin-top: 0;
+  font-size: var(--fs-xxs);
+  font-weight: var(--fw-500);
+  color: var(--clr-gray-drk);
+}
+
+/* Images */
+/* ------------------------------------------------------------------- */
+.profile-pic {
+  --border-2: 1px solid var(--clr-gray);
+  --border-rad: 50%;
+
+  width: 48px;
+  border: var(--border-2);
+  border-radius: var(--border-rad);
+}
+
+/* Utility */
+/* ------------------------------------------------------------------- */
+.hidden {
+  display: none;
+}
