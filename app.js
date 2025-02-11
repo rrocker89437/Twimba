@@ -12,7 +12,7 @@ tweetBtn.addEventListener("click", () => {
 
 document.addEventListener("click", (e) => {
   if (e.target.dataset.like) {
-    console.log("Like", e.target.dataset.like);
+    handleLikeClick(e.target.dataset.like);
   } else if (e.target.dataset.reply) {
     console.log("Reply", e.target.dataset.reply);
   } else if (e.target.dataset.retweet) {
@@ -21,6 +21,17 @@ document.addEventListener("click", (e) => {
     return;
   }
 });
+
+function handleLikeClick(tweetId) {
+  // Find the tweet object from the tweetsData array
+  const targetTweetObj = tweetsData.filter(function (tweet) {
+    // Check if the tweetId matches the uuid of the tweet object
+    return tweet.uuid === tweetId;
+    // Return the first object that matches the condition
+  })[0];
+  targetTweetObj.likes++;
+  console.log(tweetsData);
+}
 
 function getFeedHtml() {
   let feedHtml = ``;
