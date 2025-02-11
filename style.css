@@ -20,6 +20,7 @@
   /* Colors */
   --clr-white: #ffffff;
   --clr-gray: #d3d3d3;
+  --clr-gray-md: #999;
   --clr-gray-drk: #555555;
   --clr-blue: #0f8cdf;
   --clr-red: #ff0000;
@@ -56,6 +57,10 @@ h1 {
 i {
   font-size: var(--fs-md);
   cursor: pointer;
+}
+
+.fa-solid {
+  color: var(--clr-gray-md);
 }
 
 .liked {
@@ -95,6 +100,7 @@ textarea {
   height: 60px;
   font-size: var(--fs-lg);
   line-height: var(--lh-md);
+  resize: none;
   border: none;
 }
 
@@ -120,7 +126,7 @@ button {
   margin: 15px 0;
   padding: 20px 0 0 0;
   width: 100%;
-  border: var(--border);
+  border-top: var(--border);
 }
 
 .tweet-inner {
